@@ -16,3 +16,24 @@ Redux & Async code:
     - Halts the dispatch
     - Perform async request 
     - Resume dispatch
+
+```mermaid
+  graph TD
+    D[Action Creator]
+    C[Reducer]
+    A((Redux))
+    E[Dispatch Action]
+    B[Component]
+
+  subgraph 
+    D---C
+    E---|dispatches an action - e.g. addpost <br/> Contains optional payloads|B
+    subgraph  
+      D---|Thunk: <br/> Halt the dispatch <br/> Perform async request <br/> Resume dispatch|E
+    end
+    subgraph 
+      C---|Update central state|A
+      A---|subscribe to changes - props|B
+    end
+  end
+```

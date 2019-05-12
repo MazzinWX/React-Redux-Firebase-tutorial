@@ -20,7 +20,7 @@ const ProjectDetails = (props) => {
                     </div>
                     <div className="card-action grey lighten-4 grey-text">
                         <div>Posted by {project.authorFirstName} {project.authorLastName}</div>
-                        <div>8th may 4.20 pm</div>
+                        <div>{project.createdAt.toDate().toDateString()}</div>
                     </div>
                 </div>
             </div>

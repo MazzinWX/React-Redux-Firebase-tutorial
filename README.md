@@ -1,18 +1,22 @@
-React Redux & Firebase tutorial
+> *BeCode* <br/>
+"In Code We Trust" <br/>
+Lovelace 3.9 <br/>
+
+**React Redux & Firebase tutorial
 
 
-Started 06/05/2019
+*Started 06/05/2019
 
-Various steps:
+**Various steps:**
     - Understand React and how components work
     - Add redux middleware (Thunk)
     - Create firebase DB and connect it
 
 It's a good base to undestand NoSql databases and help to start with Rethinkdb ;)
 
-Redux & Async code:
+**Redux & Async code:**
  To better understand Async communication, we use a middleware => "Thunk".
-  Thunk:
+  *Thunk:
     - Halts the dispatch
     - Perform async request 
     - Resume dispatch

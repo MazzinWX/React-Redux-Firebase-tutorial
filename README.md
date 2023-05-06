@@ -22,20 +22,20 @@ It's a good base to undestand NoSql databases and help to start with Rethinkdb ;
     - Resume dispatch
 
 ```mermaid
-  graph TD
+  graph TD;
     D[Action Creator]
     C[Reducer]
     A((Redux))
     E[Dispatch Action]
     B[Component]
 
-  subgraph 
+  subgraph full graph
     D---C
     E---|dispatches an action - e.g. addpost <br/> Contains optional payloads|B
-    subgraph  
+    subgraph  Action & dispatch
       D---|Thunk: <br/> Halt the dispatch <br/> Perform async request <br/> Resume dispatch|E
     end
-    subgraph 
+    subgraph reducer part
       C---|Update central state|A
       A---|subscribe to changes - props|B
     end
